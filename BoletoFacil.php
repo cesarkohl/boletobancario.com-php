@@ -80,7 +80,7 @@ class BoletoFacil
     }
 
     /**
-     * Issue gharge
+     * Issue charge
      * Geração de cobranças
      *
      * documentation: https://sandbox.boletobancario.com/boletofacil/integration/integration.html#cobrancas
@@ -157,7 +157,7 @@ class BoletoFacil
      * @param string $responseType
      * @return mixed
      */
-    public function fetchPaymentDetails($paymentToken, $responseType = '')
+    public function queryPaymentDetails($paymentToken, $responseType = '')
     {
         $url = 'https://'.$this->environment.'.boletobancario.com/boletofacil/integration/api/v1/fetch-payment-details';
 
@@ -171,14 +171,14 @@ class BoletoFacil
     }
 
     /**
-     * Fetch Balance
+     * Query Balance
      * Consulta de Saldo
      *
      * documentation: https://sandbox.boletobancario.com/boletofacil/integration/integration.html#saldo
      *
      * @return array|mixed|object
      */
-    public function fetchBalance()
+    public function queryBalance()
     {
         $url = 'https://'.$this->environment.'.boletobancario.com/boletofacil/integration/api/v1/fetch-balance';
 
